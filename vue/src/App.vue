@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -9,8 +8,25 @@
 
 export default {
   name: 'App',
-  components: {
-
+  data(){
+    return{
+      transitionName:''
+    }
+  },
+  watch:{
+    $route(to,from){
+      if(to.meta.index===1){
+        this.transitionName='slide'
+      }
+    }
+  },
+  created() {
+    if(this.$route.path !== "/service/login"){
+      this.$router.replace("/service/login")
+    }
+  },
+  mounted() {
+    localStorage.removeItem("token")
   }
 }
 </script>
@@ -20,8 +36,13 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background-color: #F5F5F5;
+}
+
 </style>

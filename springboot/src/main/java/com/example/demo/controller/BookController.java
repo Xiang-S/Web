@@ -7,6 +7,9 @@ import com.example.demo.pojo.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
+import java.util.Map;
+
 
 @RestController
 @RequestMapping(value = "/books")
@@ -51,4 +54,13 @@ public class BookController {
         }
         return new R(true, page);
     }
+    @GetMapping("/cars/sell")
+    public Map carSell(@MatrixVariable("a") int a,@MatrixVariable int b){
+        Map<String,Object> map=new HashMap<>();
+        map.put("a",a);
+        map.put("b",b);
+        System.out.println(map);
+        return map;
+    }
+
 }
