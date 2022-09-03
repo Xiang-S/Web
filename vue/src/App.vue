@@ -43,6 +43,7 @@ body {
   margin: 0;
   height: 100%;
   background-color: #F5F5F5;
+  overflow-y: hidden;
 }
 
 </style>

@@ -939,15 +939,15 @@ a {
 
 }
 
-.dalfBut{
-  position: relative;
-  left: -180px;
-}
+/*.dalfBut{*/
+/*  position: absolute;*/
+/*  left: -180px;*/
+/*}*/
 
-.butT{
-  position: relative;
-  left: -180px;
-}
+/*.butT{*/
+/*  position: absolute;*/
+/*  left: -180px;*/
+/*}*/
 
 .modal-page .form-control {
 
@@ -977,7 +977,7 @@ a {
 
 .filter-item{
   margin-left: 10px;
-  left: -200px;
+
 }
 
 .daterange .input-group .form-control {
@@ -1358,7 +1358,6 @@ label input[type="radio"]:checked {
 
 .filter-container{
 
-  padding:10px 0 15px 0;
 
 }
 
@@ -1368,10 +1367,9 @@ label input[type="radio"]:checked {
 
   padding: 0 15px;
 
-  height: 34px;
-
   line-height: 34px;
 
+  margin-left: 10px;
 
 }
 
